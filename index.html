@@ -153,11 +153,12 @@
     }
 
     .project-card {
-      background: #fff0f5;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
+      text-align: center;
     }
 
     .project-card:hover {
@@ -166,8 +167,25 @@
 
     .project-card img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      height: auto;
+      display: block;
+      border-bottom: 2px solid #f8cdda;
+    }
+
+    .project-info {
+      padding: 20px;
+    }
+
+    .project-info h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+      color: #880e4f;
+    }
+
+    .project-info p {
+      margin: 0;
+      font-size: 15px;
+      color: #444;
     }
 
     footer {
@@ -218,13 +236,17 @@
     <div class="projects">
       <div class="project-card">
         <img src="https://via.placeholder.com/300x200.png?text=Hijaiyah+App" alt="Proyek 1">
-        <h3>Aplikasi Hijaiyah</h3>
-        <p>Aplikasi belajar huruf hijaiyah dengan suara & animasi menulis.</p>
+        <div class="project-info">
+          <h3>Aplikasi Hijaiyah</h3>
+          <p>Aplikasi belajar huruf hijaiyah dengan suara & animasi menulis.</p>
+        </div>
       </div>
       <div class="project-card">
         <img src="https://via.placeholder.com/300x200.png?text=Doa+Anak" alt="Proyek 2">
-        <h3>Doa Harian Anak</h3>
-        <p>Ilustrasi lucu + suara untuk belajar doa-doa harian bagi anak TK.</p>
+        <div class="project-info">
+          <h3>Doa Harian Anak</h3>
+          <p>Ilustrasi lucu + suara untuk belajar doa-doa harian bagi anak TK.</p>
+        </div>
       </div>
     </div>
   </section>
