@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Fadhillah Nur An-nisa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff5f8;
+      color: #333;
+    }
+    header {
+      height: 100vh;
+      background: linear-gradient(to right, #f8cdda, #fbc2eb);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 500px;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      z-index: 999;
+    }
+    nav a {
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: 600;
+    }
+    section {
+      max-width: 1000px;
+      margin: 100px auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #fff0f5;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background-color: #ffe0ed;
+      color: #555;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <header>
+    <h1 data-aos="fade-up">Nama Kamu</h1>
+    <p data-aos="fade-up" data-aos-delay="200">UI/UX Designer & Frontend Web Developer. Membuat desain yang sederhana, bersih, dan menyenangkan digunakan.</p>
+  </header>
+
+  <section id="about" data-aos="fade-right">
+    <h2>Tentang Saya</h2>
+    <p>Saya seorang pengembang antarmuka yang berfokus pada desain ramah anak dan estetika yang menyenangkan. Saya suka membuat web portofolio, aplikasi edukasi, dan desain untuk anak-anak usia dini.</p>
+  </section>
+
+  <section id="projects" data-aos="fade-left">
+    <h2>Proyek</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Proyek+1" alt="Proyek 1">
+        <h3>Aplikasi Hijaiyah</h3>
+        <p>Aplikasi interaktif untuk belajar huruf hijaiyah dengan suara dan animasi menulis.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Proyek+2" alt="Proyek 2">
+        <h3>Doa Harian Anak</h3>
+        <p>Aplikasi doa-doa pendek untuk anak TK dengan ilustrasi lucu dan suara.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Kontak</h2>
+    <p>Email: kamu@email.com</p>
+    <p>Instagram: <a href="https://instagram.com/kamu" target="_blank">@kamu</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nama Kamu. Dibuat dengan 💖 menggunakan HTML + AOS</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
