@@ -104,15 +104,21 @@
     }
 
     #home {
-      height: 100vh;
-      background: linear-gradient(to right, #f8cdda, #fbc2eb);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-      scroll-margin-top: 100px;
+  height: 100vh;
+  background: linear-gradient(to right, #f8cdda, #fbc2eb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  scroll-margin-top: 100px;
+  max-width: 960px;
+  margin: 100px auto; /* biar sejajar dengan section lainnya */
+  border-radius: 12px; /* opsional biar lembut kaya section lain */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); /* biar nyatu */
+  background-color: #fce4ec; /* sebagai fallback kalau gradient error */
+}
     }
 
     #home img {
