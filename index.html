@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+contactnya ilangin <!DOCTYPE html>   
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -7,8 +7,207 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    /* [semua CSS tetap seperti sebelumnya] */
-    /* kamu tidak perlu mengubah bagian CSS apapun */
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff5f8;
+      color: #333;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      z-index: 999;
+    }
+
+    .brand {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #00695c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #111;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 10px 20px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      #home img {
+        width: 100px;
+      }
+
+      #home h1 {
+        font-size: 1.8em;
+      }
+
+      #home p {
+        font-size: 0.95em;
+        padding: 0 10px;
+      }
+
+      .scroll-down {
+        font-size: 0.8em;
+        padding: 6px 14px;
+      }
+    }
+
+    #home {
+      height: 100vh;
+      background: linear-gradient(to right, #f8cdda, #fbc2eb);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 40px;
+      scroll-margin-top: 100px;
+    }
+
+    #home img {
+      width: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
+    }
+
+    #home h1 {
+      font-size: 2.5em;
+      color: #880e4f;
+    }
+
+    #home p {
+      font-size: 1.1em;
+      max-width: 500px;
+      color: #444;
+    }
+
+    .scroll-down {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #880e4f;
+      text-decoration: none;
+      border: 2px solid #880e4f;
+      padding: 8px 18px;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .scroll-down:hover {
+      background-color: #880e4f;
+      color: white;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 100px auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      color: #e91e63;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff0f5;
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #880e4f;
+    }
+
+    .project-card p {
+      margin-top: 5px;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background-color: #ffe0ed;
+      color: #555;
+      margin-top: 100px;
+    }
   </style>
 </head>
 <body>
