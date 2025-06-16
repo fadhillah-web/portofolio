@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -17,27 +17,76 @@
       color: #333;
     }
 
-    nav {
-      background: #ffe1ed;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
-    nav a {
-      margin: 0 15px;
+    .brand {
+      color: #127066;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background-color: #131925;
+      height: 3px;
+      width: 25px;
+      margin: 3px 0;
+      transition: 0.4s;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
       text-decoration: none;
       color: #f48b8b;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
     }
 
+    /* Header & isi */
     header {
       text-align: center;
       padding: 60px 20px 20px;
@@ -75,7 +124,6 @@
       color: #f48b8b;
     }
 
-    /* Gaya untuk project */
     .project-list {
       display: flex;
       flex-direction: column;
@@ -160,13 +208,23 @@
 </head>
 <body>
 
-  <nav>
-    <a href="#tentang">Tentang</a>
-    <a href="#proyek">Proyek</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#kontak">Kontak</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="brand" href="#">Salkia Agustien</a>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#kontak">Kontak</a>
+    </div>
   </nav>
 
+  <!-- Header -->
   <header>
     <img src="https://via.placeholder.com/150" alt="Foto Profil">
     <h1>Fadhillah</h1>
@@ -225,6 +283,12 @@
   <footer>
     <p>&copy; 2025 Dibuat oleh Fadhillah Nur An-nisa</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
