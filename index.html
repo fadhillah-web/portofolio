@@ -1,20 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fadhillah Nur An-nisa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     html {
       scroll-behavior: smooth;
     }
+
     body {
       margin: 0;
       font-family: sans-serif;
       background-color: #fff3fa;
       color: #333;
     }
+
+    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -26,17 +29,20 @@
       top: 0;
       z-index: 100;
     }
+
     .brand {
       color: #f48b8b;
       font-size: 1.2em;
       font-weight: bold;
       text-decoration: none;
     }
+
     .menu-toggle {
       display: none;
       flex-direction: column;
       cursor: pointer;
     }
+
     .menu-toggle span {
       background-color: #131925;
       height: 3px;
@@ -44,98 +50,56 @@
       margin: 3px 0;
       transition: 0.4s;
     }
+
     .nav-links {
       display: flex;
       gap: 20px;
     }
+
     .nav-links a {
       text-decoration: none;
       color: #f48b8b;
       font-weight: bold;
     }
 
+    /* Home section */
     #home {
       text-align: center;
       padding: 80px 20px;
       background: linear-gradient(to right, #ffe1ed, #fff3fa);
     }
+
     #home h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       color: #f48b8b;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
+
     #home h2 {
       color: #d6708c;
-      font-size: 1.5em;
       margin-bottom: 30px;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      border-bottom: 2px solid #f48b8b;
-      display: inline-block;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-      color: #f48b8b;
-    }
-
-    .project-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      justify-items: center;
-      padding: 0 10px;
-    }
-    .project-card {
-      background-color: #ffe1ed;
-      border-radius: 15px;
-      padding: 20px;
-      max-width: 500px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      text-align: center;
-    }
-    .project-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    .project-card h3 {
-      color: #b1005b;
-    }
-
-    iframe {
-      width: 100%;
-      border: none;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .socials {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .socials a {
-      margin: 0 10px;
-      color: #f48b8b;
+    #home a {
       text-decoration: none;
-      font-size: 1.5em;
-    }
-    footer {
       background: #f48b8b;
       color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
+    #home a:hover {
+      background: #db5d75;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .menu-toggle {
         display: flex;
       }
+
       .nav-links {
         position: absolute;
         top: 60px;
@@ -148,18 +112,141 @@
         padding: 10px 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
       }
+
       .nav-links.active {
         display: flex;
+      }
+    }
+
+    /* Header & isi */
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header img {
+      width: 150px;
+      border-radius: 50%;
+      border: 4px solid #f48b8b;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #f48b8b;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #f48b8b;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      color: #f48b8b;
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .project-card {
+      background-color: #ffe1ed;
+      border-radius: 15px;
+      padding: 20px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .project-card img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      color: #b1005b;
+      margin-top: 0;
+    }
+
+    .project-card p {
+      color: #444;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      border: 2px solid #ffe1ed;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      margin: 50px auto;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .socials {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #f48b8b;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    footer {
+      background: #f48b8b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+        max-width: 300px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <a class="brand" href="#">Fadhillah Nur An-nisa</a>
     <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <div class="nav-links" id="navLinks">
       <a href="#home">Home</a>
@@ -169,11 +256,16 @@
     </div>
   </nav>
 
+  <!-- Home -->
   <section id="home">
-    <h1>Hallo! Aku</h1>
+    <h1>Hello I'm</h1>
     <h1>Fadhillah Nur An-nisa</h1>
     <h2>Mahasiswi | UI/UX Design</h2>
   </section>
+
+  <!-- Konten lainnya tetap -->
+  <!-- ... (bagian tentang, proyek, kontak, footer) ... -->
+
 
   <section id="tentang">
     <h2>Tentang Saya</h2>
@@ -190,21 +282,59 @@
       </div>
       <div class="project-card">
         <img src="uts_pemrogramanweb1.png" alt="Tugas UAS">
-        <h3>Halaman Web Profil dari Wireframe</h3>
-        <p>Hasil implementasi dari wireframe menjadi halaman profil personal.</p>
+        <h3>Implementasi Wireframe Menjadi Halaman Web Profil</h3>
+        <p>Desain halaman web ini merupakan hasil implementasi dari wireframe awal menjadi tampilan nyata. Dengan struktur sederhana namun rapi, halaman ini menampilkan identitas pemilik, 
+          serta membagi konten ke dalam tiga bagian dengan warna yang jelas dan kontras, sehingga mudah dipahami dan dijadikan contoh dalam pembelajaran dasar pembuatan web pribadi. 
+          Desain ini juga dibuat sebagai sarana latihan dalam penggunaan HTML dan CSS, agar siswa dapat memahami dasar-dasar pembuatan layout dan pengaturan tampilan halaman web.</p>
       </div>
       <div class="project-card">
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR5lfTQYHCtP1uH04q7N7P2CV9K3giRQLb2trr4yos5xupKGMGfCoCERzsxSNBcGw/pubembed?start=false&loop=false&delayms=3000" height="300"></iframe>
+        <!-- EMBEDDED SLIDE - full size 500x300 -->
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR5lfTQYHCtP1uH04q7N7P2CV9K3giRQLb2trr4yos5xupKGMGfCoCERzsxSNBcGw/pubembed?start=false&loop=false&delayms=3000"
+                frameborder="0"
+                width="500"
+                height="300"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"></iframe>
         <h3>Perancangan Sistem Informasi Pendidikan</h3>
         <p>Studi Kasus SMA Madya Utama</p>
+      </div>
+      <div class="project-card">
+        <img src="SistemPemantauanParkir.png" alt="Sistem Pemantauan Parkir">
+        <h3>Sistem Pemantauan Parkir</h3>
+        <p>Proyek ini bertujuan untuk mengembangkan sistem monitoring tempat parkir di lingkungan kampus Universitas X menggunakan aplikasi berbasis Java yang terhubung dengan database MySQL. 
+          Sistem ini dikembangkan sebagai solusi atas permasalahan keterbatasan area parkir yang sering penuh serta sulitnya petugas memantau ketersediaan tempat parkir secara real-time. 
+          Melalui aplikasi ini, pengguna atau petugas dapat melihat informasi tempat parkir berdasarkan lokasi, status (tersedia/ditempati), dan jenis kendaraan. 
+          Data ditampilkan dalam bentuk tabel interaktif dengan fitur CRUD seperti tambah, edit, dan hapus data. Proses bisnis utama meliputi pendaftaran tempat parkir oleh petugas, pembaruan status secara berkala, pemeriksaan ketersediaan oleh pengguna, dan pembuatan laporan penggunaan parkir. 
+          Selain memberikan solusi praktis, proyek ini juga menjadi latihan dalam merancang model data, membuat koneksi database, dan menampilkan data dinamis melalui antarmuka Java.</p>
+      </div>
+      <div class="project-card">
+        <img src="DaftarKetersediaanRuangan.png" alt="Sistem Pemantauan Ketersediaan Ruangan">
+        <h3>Sistem Pemantauan Ketersediaan Ruangan</h3>
+        <p>Proyek ini bertujuan untuk membuat sistem pemantauan ketersediaan ruangan menggunakan aplikasi Java yang terhubung dengan database MySQL. 
+          Sistem ini dikembangkan sebagai solusi atas permasalahan pengelolaan ruangan yang kurang efisien di lingkungan kantor. 
+          Melalui aplikasi ini, pengguna dapat melihat status ruangan (tersedia atau ditempati), lengkap dengan informasi kapasitas dan lokasi. 
+          Proses bisnis yang didukung meliputi pendaftaran ruangan oleh admin, pembaruan status secara real-time, pemesanan ruangan, dan penyajian laporan penggunaan ruangan. 
+          Proyek ini juga menjadi latihan dalam merancang model data, membuat koneksi database, serta menampilkan data ke antarmuka Java secara dinamis.</p>
+      </div>
+      <div class="project-card">
+        <img src="MVCMahasiswa.png" alt="Latihan Java Lanjutan">
+        <h3>Aplikasi Data Mahasiswa Berbasis Java (MVC + Bootstrap)</h3>
+        <p>Proyek ini bertujuan untuk membangun aplikasi web sederhana berbasis Java yang digunakan untuk mengelola data mahasiswa. 
+          Aplikasi ini menampilkan daftar mahasiswa dalam bentuk tabel yang berisi NIM, nama, dan program studi. 
+          Sistem ini juga dilengkapi fitur pencarian data, penambahan mahasiswa baru, pengeditan data, dan penghapusan entri. 
+          Dengan adanya aplikasi ini, proses pengelolaan data mahasiswa menjadi lebih praktis, efisien, dan sistematis.
+          Proyek dikembangkan sebagai bagian dari modul praktikum yang memperkenalkan konsep arsitektur MVC (Model–View–Controller) dalam pengembangan aplikasi web Java. 
+          Selain itu, framework Bootstrap 5 diterapkan untuk memperindah tampilan antarmuka pengguna (UI) dan mempercepat proses styling. 
+          Melalui proyek ini, mahasiswa berlatih membangun aplikasi yang terstruktur, fungsional, dan user-friendly, serta memahami koneksi antara aplikasi Java dan database MySQL melalui JDBC.</p>
       </div>
     </div>
   </section>
 
   <section id="kontak">
     <h2>Kontak & Sosial Media</h2>
-    <p>Email: <a href="mailto:lulu.na1206@gmail.com">lulu.na1206@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/laa_dilah" target="_blank">@laa_dilah</a></p>
+    <p>Email: <a href="mailto:lulu.na1206@gmail.com"></a>lulu.na1206@gmail.com</p>
+    <p>Instagram: <a href="mailto:instagram:laa_dilah"></a>laa_dilah</p>
     <div class="socials">
       <a href="https://instagram.com/fadhillah.web" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://github.com/fadhillah-web" target="_blank"><i class="fab fa-github"></i></a>
